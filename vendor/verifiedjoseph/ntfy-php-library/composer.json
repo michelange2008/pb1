@@ -1,0 +1,49 @@
+{
+    "name": "verifiedjoseph/ntfy-php-library",
+    "description": "PHP library for interacting with a Ntfy server",
+    "keywords": ["Ntfy"],
+    "homepage": "https://github.com/VerifiedJoseph/ntfy-php-library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "VerifiedJoseph",
+            "homepage": "https://github.com/VerifiedJoseph"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ntfy\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.0",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "phpstan/phpstan-phpunit": "^2.0",
+        "phpunit/phpunit": "^11.4",
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "scripts": {
+        "lint": "phpstan && phpcs",
+        "lint-phpstan": "phpstan",
+        "lint-phpcs": "phpcs",
+        "lint-phpcs-action": "phpcs --report=checkstyle | cs2pr",
+        "test": "phpunit --colors --coverage-html coverage-reports",
+        "fix": "phpcbf"
+    },
+    "config": {
+        "platform": {
+            "php": "8.2"
+        }
+    }
+}
