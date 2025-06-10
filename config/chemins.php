@@ -1,6 +1,6 @@
 <?php
 
-$path = "core/public";
+$path = "";
 
 return [
   'images' => $path.'/img/',
